@@ -1,0 +1,273 @@
+* {
+    padding: 0;/*Coloca todos los márgenes internos de los elementos del sitio en cero*/
+    margin: 0;/*Coloca todos los márgenes de los elementos del sitio en cero*/
+    box-sizing: border-box;/*indica cómo se deben calcular las medidas de un elemento. El valor border-box en el box-sizing hace que el padding y el border pasen a formar parte del cálculo del ancho de la caja y no lo suman posteriormente. Si coloco que el ancho de un elemento es de 250px, me respetará ese ancho aunque el elemento tenga borde o padding.*/
+    text-decoration: none;/* Elimina el subrayado de los elementos que lo contengan (por ejemplo los que son links)*/
+    list-style-type: none;/*Elimina los estilos de los elementos de lista <li>. En el caso de las listas desordenadas, elimina los puntitos.*/
+  }/*Resetea los estilos y los aplica a toda la web*/
+
+body{
+      background-color: #ffffff;
+}
+
+img.sm{
+        width: 150px;
+        height: 150px;
+}
+
+img.me{
+        width: 150px;
+        height: 200px;
+}
+
+img.la{
+        width: 100%;
+        height: 300px;
+}
+
+img.bor{
+        border-radius: 10px;
+}
+
+.fuente-clara {
+    color: #eeeeee;
+}
+  
+.fuente-oscura {
+    color: #22211f;
+}
+  
+.fuente-acento {
+    color: #b59a61;
+}
+  
+nav ul li {
+    font-size: 14px;
+    line-height: 30px;
+    text-transform: uppercase;
+}
+  
+nav ul li a {
+    color: #eeeeee;
+}
+
+header{
+    background-color: #272acabe;
+    color: #00000080;
+    font-family: cursive;
+    font-size: 20px;
+    width: 100%;
+    padding: 25px;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+}
+
+header h1.fuente-acento {
+    font-size: 30px;
+    font-weight: bold;
+    display: inline-block;
+    line-height: 100px;
+    padding: 0 50px;
+}
+
+header nav {
+    height: 80px;
+    float: right;
+}
+
+main{
+    background-color: #ffffff;
+    width: 100%;
+    padding: 50px;
+    
+}
+
+footer{
+    background-color: #00000080;
+    font-family: cursive;
+    font-size: 15px;
+    width: 100%;
+    padding: 25px;
+    clear: both;
+}
+
+nav{
+    padding: 15px;
+    margin: 15px;
+}
+
+nav ul li {
+    font-size: 14px;
+    line-height: 30px;
+    text-transform: uppercase;
+}
+
+nav ul li a{
+    color: #eeeeee;
+}
+
+
+.fuente-acento{
+    color: #b59a61;
+}
+
+.fuente-oscura{
+    color: #3b0de1;
+}
+
+.fuente-clara{
+    color: #eeeeee;
+}
+
+img p a {
+    color: #e64c19;
+    font-family: Impact;
+    font-size: smaller;
+}
+
+h1{
+    font-family: cursive;
+    padding: 15px;
+    margin: 0px;
+    text-align: left;
+}
+
+div{
+    background-color: #ffffff;
+    float: left;
+}
+
+/*Botones del menu*/
+
+/* .boton { */
+/*    color: coral;/*Color Letra*/
+/*    background-color: #dfae10; /*Color del fondo*/
+/*    font-weight: bold;
+    padding: 2px;
+    text-align: center;
+    border: 2px solid #22211f; /*Borde y Color*/
+/*    border-radius: 15px;
+    cursor: pointer;
+    display: inline-block;
+}*/
+
+.contacto {
+    font-style: italic;
+    background-color: #ffb300; /*Color Fondo*/
+}
+
+.seccion3 {
+    float: left;
+    width: 300px;
+    height: 500px;
+}
+
+.seccion4 {
+    float: left;
+    width: 300px;
+    height: 500px;
+}
+
+#principal .seccion1 {
+    padding: 110px 0px 10px 0px;
+}
+
+.seccion1 .parrafo1 {
+    padding: 20px 0px 5px 0;
+}
+
+.seccion1 .parrafo2 {
+    padding: 20px 0px;
+}
+
+.seccion1 .parr1 img.me{
+    display: flex;
+    justify-content: space-around;
+    background-color: #d6e9fe;
+}
+
+section.seccion1 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    border-color: #e64c19;
+}
+
+section {
+    display: block;
+}
+
+main .seccion2 img {
+    width: 100%;
+}
+
+/* #check {
+    display: none;
+} */
+
+.checkbtn {
+    font-size: 25px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    /* display: none; */
+}
+
+.parr1 {
+    display: flex;
+    justify-content: baseline;
+}
+
+.parr1-img {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+    header {
+        background-color: #0cd894;
+        font-size: 70%;
+    }
+    .parr1 {
+        text-align: center;
+    }
+    .parr1-img {
+        margin-bottom: 40px;
+    }
+    h2.fuente-acento {
+        text-align: center;
+    }
+    .checkbtn {
+        display: block;
+    }
+    #encabezado ul.menu {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: #2c3e50;
+        text-align: center;
+        top: 80px;
+        left: 100%;
+        text-align: center;
+        transition: all 0.5s;
+    }
+    #check:checked ~ ul {
+        left: 0%;
+        display: block;
+    }
+    #encabezado nav ul li {
+        display: block;
+        margin: 50 px 0;
+        line-height: 30px;
+    }
+    #encabezado nav ul li a {
+        font-size: 20px;
+    }
+    #check:checked ~ .checkbtn {
+        color: #2c3e50;
+    }
+}
