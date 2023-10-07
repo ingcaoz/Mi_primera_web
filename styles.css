@@ -9,6 +9,7 @@
 body{
       background-color: #ffffff;
 }
+/* ESTILOS GENERALES */
 
 img.sm{
         width: 150px;
@@ -50,6 +51,7 @@ nav ul li {
 nav ul li a {
     color: #eeeeee;
 }
+/* ENCABEZADO */
 
 header{
     background-color: #272acabe;
@@ -63,6 +65,14 @@ header{
     top: 0;
 }
 
+.logo {
+    display: inline-block;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 50px;
+    font-weight: bold;
+  }
+  
 header h1.fuente-acento {
     font-size: 30px;
     font-weight: bold;
@@ -83,18 +93,27 @@ main{
     
 }
 
-footer{
-    background-color: #00000080;
-    font-family: cursive;
-    font-size: 15px;
-    width: 100%;
-    padding: 25px;
-    clear: both;
-}
 
 nav{
     padding: 15px;
     margin: 15px;
+}
+
+nav ul.menu {
+    float: right;
+}
+
+nav ul.menu li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul.menu li a {
+    color: #eee;
+    font-size: 15px;
+    text-transform: uppercase;
+    padding: 7px 7px;
 }
 
 nav ul li {
@@ -141,20 +160,32 @@ div{
 /*Botones del menu*/
 
 /* .boton { */
-/*    color: coral;/*Color Letra*/
-/*    background-color: #dfae10; /*Color del fondo*/
-/*    font-weight: bold;
+    /*    color: coral;/*Color Letra*/
+    /*    background-color: #dfae10; /*Color del fondo*/
+    /*    font-weight: bold;
     padding: 2px;
     text-align: center;
     border: 2px solid #22211f; /*Borde y Color*/
-/*    border-radius: 15px;
+    /*    border-radius: 15px;
     cursor: pointer;
     display: inline-block;
 }*/
 
+/* MENU */
+
+.checkbtn {
+    font-size: 25px;
+    color: rgb(186, 5, 5);
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
 .contacto {
     font-style: italic;
-    background-color: #ffb300; /*Color Fondo*/
+    background-color: #2a3337; /*Color Fondo*/
 }
 
 .seccion3 {
@@ -214,7 +245,7 @@ main .seccion2 img {
     line-height: 80px;
     margin-right: 40px;
     cursor: pointer;
-    /* display: none; */
+    display: none;
 }
 
 .parr1 {
@@ -229,8 +260,7 @@ main .seccion2 img {
 
 @media (max-width: 768px) {
     header {
-        background-color: #0cd894;
-        font-size: 70%;
+        background-color: burlywood;
     }
     .parr1 {
         text-align: center;
@@ -244,6 +274,38 @@ main .seccion2 img {
     .checkbtn {
         display: block;
     }
+    .navbar {
+        height: 0vh;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background: #2c3e50;
+        text-align: center;
+    
+        transition: all 0.5s;
+        overflow: hidden;
+    }
+    .navbar ul.menu {
+        float: none;
+        display: block;
+        width: 174px;
+        margin: 0 auto;
+        opacity: 0;
+    }
+    
+    .navbar ul.menu li a:hover {
+        color: #b59a61;
+    }
+      /* ACTIVE */
+      .navbar.active {
+          height: 100vh;
+    }
+    
+      .navbar.active ul.menu {
+          opacity: 1;
+    }
+    
     #encabezado ul.menu {
         position: fixed;
         width: 100%;
@@ -270,4 +332,13 @@ main .seccion2 img {
     #check:checked ~ .checkbtn {
         color: #2c3e50;
     }
+}
+
+footer{
+    background-color: #00000080;
+    font-family: cursive;
+    font-size: 15px;
+    width: 100%;
+    padding: 25px;
+    clear: both;
 }
